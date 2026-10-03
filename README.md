@@ -116,7 +116,7 @@ Services covered:
 | Requirement | Detail |
 | ------------- | -------- |
 | Data source | Typed local catalogue in `src/lib/projects.ts` |
-| Categories | New builds · Yacht interiors · Yacht refits |
+| Categories | New Builds · Yacht Interiors · Yacht Refits |
 | Category tabs | Tab bar with project count badges |
 | Search | Real-time client-side text filter across name, length, year, location, collaborator |
 | Pagination | Initial display of 8 rows; "View all N projects" toggle for full list |
@@ -214,7 +214,7 @@ Portfolio images are referenced through **asset pointer JSON files** in `src/ass
 | `hero.asset.json` | Hero section background |
 | `dream.asset.json` | M/Y Dream interior |
 | `crescent.asset.json` | M/Y Crescent interior |
-| `oceancay.asset.json` | Ocean Cay Villa exterior |
+| `oceancay1.asset.json` | Ocean Cay Villa exterior |
 | `oceancay2.asset.json` | Ocean Cay Villa bedroom |
 | `keybiscayne.asset.json` | Key Biscayne Residence |
 
@@ -289,8 +289,8 @@ Each JSON file contains a `url` field pointing to a hosted copy of the image. Th
 
 | Scenario | Behaviour |
 | ---------- | ---------- |
-| Route not found | Custom 404 component with "Go home" link |
-| Runtime error (client) | `ErrorComponent` boundary with "Try again" + "Go home" actions; error logged to console |
+| Route not found | Custom 404 component with "Go Home" link |
+| Runtime error (client) | `ErrorComponent` boundary with "Try Again" + "Go Home" actions; error logged to console |
 | SSR crash | `server.ts` wrapper catches exceptions and returns a static error HTML page |
 | Nitro swallowed errors | Detection of h3's `{unhandled: true}` JSON body → replaced with error page |
 | Inquiry submission failure | Inline error message with fallback contact details |

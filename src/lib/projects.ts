@@ -1,15 +1,32 @@
-export type Project = { name: string; length: string; year: string; location: string; collaborator: string }
-const parse = (source: string): Project[] => source.trim().split('\n').map(line => {
-  const [name, length, year, location, collaborator] = line.split('|')
-  return { name: name ?? '', length: length ?? '', year: year ?? '', location: location ?? '', collaborator: collaborator ?? '' }
-})
+export type Project = {
+  name: string;
+  length: string;
+  year: string;
+  location: string;
+  collaborator: string;
+};
+const parse = (source: string): Project[] =>
+  source
+    .trim()
+    .split("\n")
+    .map((line) => {
+      const [name, length, year, location, collaborator] = line.split("|");
+      return {
+        name: name ?? "",
+        length: length ?? "",
+        year: year ?? "",
+        location: location ?? "",
+        collaborator: collaborator ?? "",
+      };
+    });
 export const projects = {
-  'New builds': parse(`Genesis 153′ Hull #2|46.5 m|2003|Italy|Luiz De Basto
+  "New Builds": parse(`Genesis 153′ Hull #2|46.5 m|2003|Italy|Luiz De Basto
 Genesis 153′ Hull #1|46.5 m|2002|Italy|Luiz De Basto
 Barracuda Italmarine 112′|34.15 m|1994|Italy|Arrabito / Evan K. Marshall
 Destiny Yachts 98′|29.8 m|1997|USA|Arrabito / Evan K. Marshall
 Genesis 72′|21.5 m|1996|Italy|Genesis`),
-  'Yacht interiors': parse(`Confidential project · loose furniture|141 m|2014|Abu Dhabi|Pierre Jean Studio
+  "Yacht Interiors":
+    parse(`Confidential project · loose furniture|141 m|2014|Abu Dhabi|Pierre Jean Studio
 Maryah 410′|125 m|2014|Greece|Jonny Horsfield
 Dream 348′|106 m|2018|Greece|CQS
 Confidential project|90 m|2018|USA|Genesis
@@ -37,7 +54,7 @@ Columbo Yacht 60′|18 m|1994|USA|J.C. Espinosa
 530LXF series|16 m|2018|USA|Genesis
 Scaramouche 48′|14.5 m|2023|USA|Genesis
 Forte 47′|14 m|2025|Italy|PGYD`),
-  'Yacht refits': parse(`Whisper|95 m|2026|USA|Michael Smith, Inc. / Cadogan Tate
+  "Yacht Refits": parse(`Whisper|95 m|2026|USA|Michael Smith, Inc. / Cadogan Tate
 Lonian|87 m|2025|USA|Atelier AM
 Man of Steel|86 m|2024|Italy|Owner
 Seven Seas|86 m|2021|USA|Nuvolari & Lenard
@@ -129,4 +146,4 @@ The Gator|19 m|2013|USA|Shipyard
 Motek|19 m|2021|USA|Shipyard
 Zero|16 m|2012|USA|Federico Del Rosso
 Dont Worry|15 m|1995|Greece|Shipyard`),
-}
+};

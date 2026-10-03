@@ -18,7 +18,7 @@ import { projects } from "@/lib/projects";
 import hero from "@/assets/hero.asset.json";
 import crescent from "@/assets/crescent.asset.json";
 import dream from "@/assets/dream.asset.json";
-import oceancay from "@/assets/oceancay.asset.json";
+import oceancay1 from "@/assets/oceancay1.asset.json";
 import oceancay2 from "@/assets/oceancay2.asset.json";
 import keybiscayne from "@/assets/keybiscayne.asset.json";
 
@@ -56,14 +56,14 @@ export const Route = createFileRoute("/")({
 
 const nav = [
   { label: "Expertise", href: "#expertise" },
-  { label: "Selected work", href: "#work" },
+  { label: "Selected Work", href: "#work" },
   { label: "Fit-Lock®", href: "#fitlock" },
-  { label: "Project archive", href: "#archive" },
+  { label: "Project Archive", href: "#archive" },
 ];
 
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [category, setCategory] = useState<keyof typeof projects>("Yacht interiors");
+  const [category, setCategory] = useState<keyof typeof projects>("Yacht Interiors");
   const [query, setQuery] = useState("");
   const [showAll, setShowAll] = useState(false);
   const [sending, setSending] = useState(false);
@@ -116,7 +116,7 @@ function Index() {
       setErrorText(
         error instanceof Error
           ? error.message
-          : "Your inquiry could not be sent. Please call or email us directly.",
+          : "Your inquiry could not be sent! Please call or email us directly.",
       );
     } finally {
       setSending(false);
@@ -212,7 +212,7 @@ function Index() {
 
       <section className="intro-band" aria-label="Genesis in brief">
         <div className="page-width intro-grid">
-          <p className="eyebrow">AN INTERNATIONAL ATELIER</p>
+          <p className="eyebrow">AN INTERNATIONAL ATELIER &rarr;</p>
           <p>
             From a singular piece of furniture to the interior of a 141-metre vessel, every
             commission begins with the same belief:{" "}
@@ -228,7 +228,7 @@ function Index() {
         <div className="page-width">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">01 / OUR DISCIPLINES</p>
+              <p className="eyebrow">01 / OUR DISCIPLINES &rarr;</p>
               <h2>
                 Craft, <em>engineered.</em>
               </h2>
@@ -240,11 +240,11 @@ function Index() {
           </div>
           <div className="service-grid">
             <article className="service-item">
-              <span className="service-number">01</span>
+              <span className="service-number">01.</span>
               <div>
                 <h3>
-                  Superyacht interiors
-                  <br />& refits
+                  Superyacht Interiors
+                  <br />& Refits
                 </h3>
                 <p>
                   Complete custom interiors for vessels from 48′ to over 462′. Mockups, fabrication,
@@ -254,12 +254,12 @@ function Index() {
               <ArrowUpRight className="service-arrow" size={22} />
             </article>
             <article className="service-item">
-              <span className="service-number">02</span>
+              <span className="service-number">02.</span>
               <div>
                 <h3>
                   Residential
                   <br />
-                  millwork
+                  Millwork
                 </h3>
                 <p>
                   Superyacht-level cabinetry, kitchens, home theaters and architectural woodwork for
@@ -269,12 +269,12 @@ function Index() {
               <ArrowUpRight className="service-arrow" size={22} />
             </article>
             <article className="service-item">
-              <span className="service-number">03</span>
+              <span className="service-number">03.</span>
               <div>
                 <h3>
                   Bespoke
                   <br />
-                  furniture
+                  Furniture
                 </h3>
                 <p>
                   One-of-a-kind pieces composed in fine wood veneers, hand-painted finishes, leather
@@ -291,7 +291,7 @@ function Index() {
         <div className="page-width">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">02 / SELECTED WORK</p>
+              <p className="eyebrow">02 / SELECTED WORK &rarr;</p>
               <h2>
                 Made to <em>belong.</em>
               </h2>
@@ -374,7 +374,7 @@ function Index() {
         <div className="page-width fitlock-grid">
           <div className="fitlock-visual">
             <img
-              src={oceancay.url}
+              src={oceancay1.url}
               alt="Ocean Cay Villa, a residential project by Genesis Interiors"
               loading="lazy"
             />
@@ -384,7 +384,7 @@ function Index() {
             </div>
           </div>
           <div className="fitlock-copy">
-            <p className="eyebrow">03 / THE ENGINEERING ADVANTAGE</p>
+            <p className="eyebrow">03 / THE ENGINEERING ADVANTAGE &rarr;</p>
             <h2>
               Precision you can <em>feel.</em>
             </h2>
@@ -397,7 +397,7 @@ function Index() {
             <div className="fitlock-detail">
               <span className="fitlock-detail-index">01 —</span>
               <div>
-                <h3>Full-scale pre-assembly</h3>
+                <h3>Full-Scale Pre-Assembly</h3>
                 <p>Fit and finish checked in-house before final installation.</p>
               </div>
             </div>
@@ -427,7 +427,7 @@ function Index() {
         <div className="page-width">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">04 / PROJECT ARCHIVE</p>
+              <p className="eyebrow">04 / PROJECT ARCHIVE &rarr;</p>
               <h2>
                 A life’s work <em>at sea.</em>
               </h2>
@@ -457,11 +457,11 @@ function Index() {
             </div>
             <label className="archive-search">
               <Search size={17} />
-              <span className="sr-only">Search projects</span>
+              <span className="sr-only">Search Projects</span>
               <input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search the archive"
+                placeholder="Search The Archive"
               />
             </label>
           </div>
@@ -494,7 +494,7 @@ function Index() {
       <section id="consultation" className="consultation-section">
         <div className="page-width consultation-grid">
           <div className="consultation-copy">
-            <p className="eyebrow">05 / BEGIN A CONVERSATION</p>
+            <p className="eyebrow">05 / BEGIN A CONVERSATION &rarr;</p>
             <h2>
               Every great interior begins <em>in private.</em>
             </h2>
@@ -505,13 +505,13 @@ function Index() {
             </p>
             <div className="consultation-points">
               <span>
-                <Check size={16} /> A conversation tailored to your brief
+                <Check size={16} /> A conversation tailored to your brief.
               </span>
               <span>
-                <Check size={16} /> Direct access to our Fort Lauderdale team
+                <Check size={16} /> Direct access to our Fort Lauderdale team.
               </span>
               <span>
-                <Check size={16} /> Thoughtful planning from the outset
+                <Check size={16} /> Thoughtful planning from the outset.
               </span>
             </div>
             <div className="direct-contact">
@@ -540,11 +540,11 @@ function Index() {
               </div>
             ) : (
               <form onSubmit={onSubmit}>
-                <p className="form-eyebrow">PRIVATE PROJECT INQUIRY</p>
-                <h3>Tell us what you envision.</h3>
+                <p className="form-eyebrow">PRIVATE PROJECT INQUIRY &rarr;</p>
+                <h3>Tell us what you envision!</h3>
                 <div className="form-grid">
                   <label>
-                    YOUR NAME{" "}
+                    YOUR NAME:{" "}
                     <input
                       required
                       autoComplete="name"
@@ -556,7 +556,7 @@ function Index() {
                     />
                   </label>
                   <label>
-                    EMAIL ADDRESS{" "}
+                    E-MAIL ADDRESS:{" "}
                     <input
                       required
                       type="email"
@@ -568,7 +568,7 @@ function Index() {
                     />
                   </label>
                   <label>
-                    PHONE{" "}
+                    PHONE NUMBER:{" "}
                     <input
                       type="tel"
                       autoComplete="tel"
@@ -579,20 +579,20 @@ function Index() {
                     />
                   </label>
                   <label>
-                    PROJECT TYPE{" "}
+                    PROJECT TYPE:{" "}
                     <select
                       value={form.projectType}
                       onChange={(e) => setForm({ ...form, projectType: e.target.value })}
                     >
-                      <option>Yacht refit</option>
-                      <option>Yacht new build</option>
+                      <option>Yacht Refit</option>
+                      <option>Yacht New Build</option>
                       <option>Residence</option>
                       <option>Furniture</option>
                       <option>Other</option>
                     </select>
                   </label>
                   <label className="form-full">
-                    VESSEL OR PROPERTY{" "}
+                    VESSEL OR PROPERTY:{" "}
                     <input
                       maxLength={160}
                       value={form.projectName}
@@ -601,7 +601,7 @@ function Index() {
                     />
                   </label>
                   <label className="form-full">
-                    YOUR BRIEF{" "}
+                    YOUR BRIEF:{" "}
                     <textarea
                       required
                       minLength={20}
@@ -614,7 +614,7 @@ function Index() {
                   </label>
                 </div>
                 <label className="honeypot" aria-hidden="true">
-                  Website{" "}
+                  Website Address:{" "}
                   <input
                     tabIndex={-1}
                     autoComplete="off"
@@ -653,18 +653,18 @@ function Index() {
           </div>
           <div className="footer-columns">
             <div>
-              <p className="eyebrow">FORT LAUDERDALE</p>
+              <p className="eyebrow">FORT LAUDERDALE:</p>
               <address>
-                4040 Southwest 30th Avenue
+                4040, Southwest 30th Avenue,
                 <br />
-                Fort Lauderdale, FL 33312, USA
+                Fort Lauderdale, Florida, 33312, USA.
               </address>
               <a href="https://maps.app.goo.gl/qfoS2Y7NrK65r8pC6/" target="_blank" rel="noreferrer">
-                Get directions <ArrowUpRight size={14} />
+                Get Directions <ArrowUpRight size={14} />
               </a>
             </div>
             <div>
-              <p className="eyebrow">THE GENESIS GROUP</p>
+              <p className="eyebrow">THE GENESIS GROUP:</p>
               <a href="https://www.genesisyachts.com" target="_blank" rel="noreferrer">
                 Genesis Yachts <ArrowUpRight size={14} />
               </a>
@@ -673,22 +673,28 @@ function Index() {
               </a>
             </div>
             <div>
-              <p className="eyebrow">FOLLOW THE WORK</p>
+              <p className="eyebrow">CONNECT WITH US:</p>
               <div className="social-list">
                 {socials.map(([name, url]) => (
                   <a key={name} href={url} target="_blank" rel="noreferrer">
                     {name} <ArrowUpRight size={13} />
                   </a>
                 ))}
+                <a href="https://www.genesisinteriors.com" target="_blank" rel="noreferrer">
+                  Official Website <ArrowUpRight size={13} />
+                </a>
               </div>
             </div>
           </div>
           <div className="footer-bottom">
-            <span>© {new Date().getFullYear()} Genesis Interiors</span>
-            <span>Fort Lauderdale, Florida · Viareggio, Italy</span>
-            <a href="https://www.genesisinteriors.com" target="_blank" rel="noreferrer">
-              Official website <ArrowUpRight size={13} />
-            </a>
+            <span>
+              Copyright © {new Date().getFullYear()} Genesis Interiors - All Rights Reserved!
+            </span>
+            <span>Fort Lauderdale, Florida. · Viareggio, Italy.</span>
+            <span>
+              Powered By <a href="https://www.nexadigitalservices.agency">Nexa</a>, A Digital Agency
+              By <a href="https://www.linkedin.com/in/NitinChakraborty2001/">Nitin Chakraborty</a>.
+            </span>
           </div>
         </div>
       </footer>
