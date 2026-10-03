@@ -1,0 +1,3 @@
+- [x] Build the Genesis Interiors landing page and project portfolio.
+- [x] Implement and verify private inquiry storage.
+- [x] Verify desktop/mobile presentation and interaction.
